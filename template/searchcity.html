@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}SEARCH{% endblock title %}
+
+{% block body %}
+
+
+<div class="container py-2">
+    {% comment %} <form method="post" action="/searchcity">
+    {% csrf_token %}
+        <div class="form-group">
+          <label for="location">PLACE_NAME</label>
+          <input type="text" class="form-control" name="location" id="location" placeholder="Enter your Place Name">
+        </div>
+        <button type="submit">SUBMIT</button>
+      </form> {% endcomment %}
+
+
+  <form action="" method="POST" >
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" id="clickcheck" class="btn btn-primary">CHECK</button>
+    </form>
+  <hr>
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{%static 'icons\01d.png'%}" alt="..."> 
+        <span class="temp">
+          <span id="temp-value" style="font-size:24px">{{temperature }}</span>
+        </span>  
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-temp"><small >Temperature {{temperature }}</small><hr> </h5>
+        <h5 class="card-temp"><small >Pressure {{pressure }}</small><hr> </h5>
+        <h5 class="card-temp"><small >Humidity {{humidity }}</small><hr> </h5>
+        <h5 class="card-temp"><small >Feels Like {{feels }}</small><hr> </h5>
+        <h5 class="card-temp"><small >Wind Speed {{wind_speed }}</small><hr> </h5>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+<button type="button" class="btn btn-primary" id="clickcheck" data-toggle="modal" data-target="#staticBackdrop">
+  VIEW MAP
+</button>
+
+
+
+<!-- Modal -->
+<div class="modal fade ml--10"   id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog" >
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">MAP VIEW</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{map|safe}}
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock body %}

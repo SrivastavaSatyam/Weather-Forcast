@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ABOUT{% endblock title %}
+
+{% block body %}
+<style>
+
+    .card{
+      border-radius: 10%;
+      border-width: 5px;
+      background-image: radial-gradient(circle at 16% 83%, rgba(148, 148, 148,0.06) 0%, rgba(148, 148, 148,0.06) 50%,rgba(63, 63, 63,0.06) 50%, rgba(63, 63, 63,0.06) 100%),radial-gradient(circle at 68% 87%, rgba(66, 66, 66,0.06) 0%, rgba(66, 66, 66,0.06) 50%,rgba(105, 105, 105,0.06) 50%, rgba(105, 105, 105,0.06) 100%),radial-gradient(circle at 38% 50%, rgba(123, 123, 123,0.06) 0%, rgba(123, 123, 123,0.06) 50%,rgba(172, 172, 172,0.06) 50%, rgba(172, 172, 172,0.06) 100%),linear-gradient(90deg, hsl(18,0%,1%),hsl(18,0%,1%));    
+    }
+    .col{
+      box-shadow: -10px 10px 5px rgba(0, 0, 0, 0.796);
+      transform: rotate(40deg) skewX(0deg) translate(-px,20px);
+    }
+</style>
+
+<div class="container-fluid mr-4 py-3">
+<div class="container py-4">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 bg-dark " style="border-radius:10%">
+            <img src={% static "/img/sat.png"%}  height="320" width="100%" alt="..." style="border-top-left-radius: 10%; border-top-right-radius: 10%;">
+            <div class="card-body" >
+              <p class="card-text text-white"><b>SATYAM SRIVASTAVA</b><br>
+                <small class="text-muted ">Group leader</small>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group ">
+                  <a href="https://www.linkedin.com/in/satyam-srivastava-63a88519b" target='blank'>
+                    <i class="fa fa-linkedin-square mr-3" style="font-size:48px;color:white "></i>
+                  </a>  
+                  <a href="https://github.com/SrivastavaSatyam" target ='blank'> 
+                     <i class="fa fa-github mr-3" style="font-size:48px;color:white"></i>
+                  </a>   
+                  <a href="https://instagram.com/srivastava8815" target ='blank'> 
+                     <i class="fa fa-instagram mr-3" style="font-size:48px;color:white"></i>
+                  </a> 
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm bg-dark ">
+            <img src={% static "img/dri.png"%}  height="320" width="100%" alt="..." style="border-top-left-radius: 10%; border-top-right-radius: 10%;">
+            <div class="card-body">
+              <p class="card-text text-white"><b>DRISHTI</b><br>
+                <small class="text-muted ">Group leader</small>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group ">
+                  <a href="https://www.linkedin.com/in/drishti-642b3819a" target='blank'>
+                    <i class="fa fa-linkedin-square mr-3" style="font-size:48px;color:white "></i>
+                  </a>  
+                  <a href="https://github.com/dotsbeauty" target ='blank'> 
+                     <i class="fa fa-github mr-3" style="font-size:48px;color:white"></i>
+                  </a>   
+                  <a href="https://instagram.com/_dots.beauty_" target ='blank'> 
+                     <i class="fa fa-instagram mr-3" style="font-size:48px;color:white"></i>
+                   </a> 
+                  <a href="https://twitter.com/Dotsbeauty03" target ='blank'> 
+                     <i class="fa fa-twitter" style="font-size:48px;color:white"></i>
+                  </a> 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm bg-dark ">
+            <img src={% static "img/sidnew.jpg"%}  height="320" width="100%" alt="..." style="border-top-left-radius: 10%; border-top-right-radius: 10%;">
+            <div class="card-body">
+              <p class="card-text text-white"><b>SIDDHARTH SUMAN PANDEY</b><br>
+                <small class="text-muted ">Group leader</small>
+              </p>  
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group ">
+                  <a href="https://www.linkedin.com/in/siddharth-pandey-29ab3919a" target='blank'>
+                    <i class="fa fa-linkedin-square mr-3" style="font-size:48px;color:white "></i>
+                  </a>  
+                  <a href="https://github.com/SrivastavaSatyam" target ='blank'> 
+                     <i class="fa fa-github mr-3" style="font-size:48px;color:white"></i>
+                  </a>   
+                  <a href="https://instagram.com/siddharth_s_pandey" target ='blank'> 
+                     <i class="fa fa-instagram mr-3" style="font-size:48px;color:white"></i>
+                  </a> 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+</div>  
+{% endblock body %}
